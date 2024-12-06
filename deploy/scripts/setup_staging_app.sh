@@ -8,9 +8,9 @@ cd /usr/app/admin-server
 
 export $(grep -v '^#' .env | xargs)
 
-docker rmi $CI_IMAGE_NAME
-
 sudo docker compose -f docker-compose.staging.yml down
+
+docker rmi $CI_IMAGE_NAME
 
 # Start application container(s).
 sudo docker compose -f docker-compose.staging.yml up --build
