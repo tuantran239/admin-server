@@ -30,7 +30,7 @@ ssh -o StrictHostKeyChecking=no -p $CI_DEPLOY_SSH_PORT $CI_DEPLOY_HOST << 'EOF'
   echo "---------Remove Image--------"
 
   if docker images -q "$CI_IMAGE_NAME"  > /dev/null; then
-    docker -f rmi "$CI_IMAGE_NAME"
+    docker rmi "$CI_IMAGE_NAME"
     echo "Image $CI_IMAGE_NAME deleted."
   else
     echo "Image $CI_IMAGE_NAME does not exist."
