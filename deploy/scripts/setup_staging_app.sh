@@ -13,4 +13,4 @@ sudo docker compose -f docker-compose.staging.yml down
 docker rmi $CI_IMAGE_NAME
 
 # Start application container(s).
-sudo docker compose -f docker-compose.staging.yml up
+sudo docker compose -f docker-compose.staging.yml up -d --build 
