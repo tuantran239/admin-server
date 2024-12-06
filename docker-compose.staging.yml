@@ -1,15 +1,15 @@
 version: '3.9'
 
 services:
-  node-server:
-    container_name: 
+  server:
+    container_name: admin-server
     image: travis99/admin-server
     env_file: .env
     depends_on:
       - db
     ports:
       - "9001:9001"
-  db:
+  admin-db:
     image: postgres:16-alpine
     restart: always
     ports:
