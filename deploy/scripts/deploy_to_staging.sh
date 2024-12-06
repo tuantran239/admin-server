@@ -19,17 +19,17 @@ ssh -o StrictHostKeyChecking=no -p $CI_DEPLOY_SSH_PORT $CI_DEPLOY_HOST << 'EOF'
 
   cd /usr/app/admin-server
 
-  echo "Export environment variables"
+  echo "----------Export environment variables--------"
 
   export $(grep -v '^#' .env | xargs)
 
-  echo "Login to the container registry."
+  echo "--------Login to the container registry.-------"
 
-  echo "$CI_REGISTRY_PASSWORD" | sudo docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+  echo "$CI_REGISTRY_PASSWORD" | sudo docker login -u $CI_REGISTRY_USER --password-stdin
 
   docker rmi travis99/admin-server
   
-  echo "Set up application."
-  
+  echo "---------Set up application.--------"
+
   bash ./setup_staging_app.sh
 EOF
