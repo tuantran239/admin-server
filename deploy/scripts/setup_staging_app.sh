@@ -4,10 +4,10 @@
 # This script is run on the remote server.
 set -e
 
-cd /app
+cd /usr/app/admin-server
 
 export $(grep -v '^#' .env | xargs)
 
 # Start application container(s).
 sudo docker pull $CI_DEPLOY_IMAGE
-sudo docker-compose -f docker-compose.staging.yml up -d --force-recreate --scale app="${CI_DEPLOY_NUM_APP_INSTANCES:-2}"
+sudo docker-compose -f docker-compose.staging.yml up --build

@@ -8,7 +8,7 @@ CI_DEPLOY_HOST="$CI_DEPLOY_USER@$CI_DEPLOY_SERVER"
 scp -o StrictHostKeyChecking=no -r -P $CI_DEPLOY_SSH_PORT \
   ./.env \
   ./docker-compose.staging.yml \
-  ./deploy/setup_staging_app.sh \
+  ./deploy/scripts/setup_staging_app.sh \
   $CI_DEPLOY_HOST:/usr/app/admin-server
 
 ssh -o StrictHostKeyChecking=no -p $CI_DEPLOY_SSH_PORT $CI_DEPLOY_HOST << 'ENDSSH' 
