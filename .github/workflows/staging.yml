@@ -42,6 +42,7 @@ jobs:
       CI_REGISTRY_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
       CI_REGISTRY_USER: ${{ secrets.DOCKERHUB_USERNAME }}
       CI_REGISTRY: ${{ secrets.CI_REGISTRY }}
+      CI_IMAGE_NAME: ${{ secrets.CI_IMAGE_NAME }}
     steps:
       - name: Check version
         uses: actions/checkout@v4

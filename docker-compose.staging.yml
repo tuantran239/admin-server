@@ -3,7 +3,7 @@ version: '3.9'
 services:
   server:
     container_name: admin-server
-    image: travis99/admin-server
+    image: '$CI_IMAGE_NAME'
     env_file: .env
     depends_on:
       - db
