@@ -1,0 +1,30 @@
+{
+  "fields": {
+    "email": "email",
+    "username": "username",
+    "password": "password",
+    "status": "status",
+    "phoneNumber": "phone number",
+    "user": "user"
+  },
+  "error": {
+    "default": "Error system",
+    "not_empty": "{field} is not empty",
+    "not_found": "{field} not found, please try again.",
+    "not_match": "{field} is not match, please try again.",
+    "not_exist": "{field} is not exist, please try again.",
+    "not_valid": "{field} is not valid, please try again.",
+    "not_auth": "{field} is not auth, please try again.",
+    "existed": "{field} is already exist, please try again.",
+    "max_length": "{field} max length is {max}, please try again.",
+    "min_length": "{field} min length is {min}, please try again."
+  },
+  "success": {
+    "default": "Success",
+    "create": "Create {field} successfully",
+    "update": "Update {field} successfully",
+    "delete": "Delete {field} successfully",
+    "login": "Login successfully",
+    "register": "Register successfully"
+  }
+}

@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  node-server:
+    container_name: 
+    image: travis99/admin-server
+    env_file: .env
+    depends_on:
+      - db
+    ports:
+      - "9001:9001"
+  db:
+    image: postgres:16-alpine
+    restart: always
+    ports:
+      - '2345:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nest-prisma
+    volumes: 
+     - ./database/postgres:/var/lib/postgresql/data

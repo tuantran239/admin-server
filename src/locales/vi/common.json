@@ -1,0 +1,30 @@
+{
+  "fields": {
+    "email": "email",
+    "username": "tên người dùng",
+    "password": "mật khẩu",
+    "status": "tình trạng",
+    "phoneNumber": "sđt",
+    "user": "người dùng"
+  },
+  "error": {
+    "default": "Lỗi hệ thống",
+    "not_empty": "{field} không được để trống",
+    "not_found": "{field} không tìm thấy, xin hãy thử lại.",
+    "not_match": "{field} không trùng khớp, xin hãy thử lại.",
+    "not_exist": "{field} không tồn tại, xin hãy thử lại.",
+    "not_valid": "{field} không hợp lệ, xin hãy thử lại.",
+    "not_auth": "{field} không xác thực, xin hãy thử lại.",
+    "existed": "{field} đã tồn tại, xin hãy thử lại.",
+    "max_length": "{field}  {max}, xin hãy thử lại.",
+    "min_length": "{field} min length is {min}, xin hãy thử lại."
+  },
+  "success": {
+    "default": "Thành công",
+    "create": "Tạo {field} thành công",
+    "update": "Cập nhật {field} thành công",
+    "delete": "Xoá {field} thành công",
+    "login": "Đăng nhập thành công",
+    "register": "Đăng kí thành công"
+  }
+}

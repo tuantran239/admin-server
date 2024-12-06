@@ -1,0 +1,23 @@
+version: '3.0'
+
+services:
+  server:
+    container_name: admin-server
+    build: .
+    env_file: .env
+    depends_on:
+      - db
+    ports:
+      - "9001:9001"
+  db:
+    image: postgres:16-alpine
+    restart: always
+    ports:
+      - '2345:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: admin-server
+    volumes: 
+     - ./database/postgres:/var/lib/postgresql/data
+ 
