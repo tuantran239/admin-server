@@ -43,7 +43,7 @@ jobs:
       CI_REGISTRY_USER: ${{ secrets.DOCKERHUB_USERNAME }}
       CI_REGISTRY: ${{ secrets.CI_REGISTRY }}
     steps:
-      - name: Check out Git repository
+      - name: Check version
         uses: actions/checkout@v4
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.7.0
