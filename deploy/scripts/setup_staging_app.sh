@@ -9,4 +9,4 @@ cd /usr/app/admin-server
 export $(grep -v '^#' .env | xargs)
 
 # Start application container(s).
-sudo docker-compose -f docker-compose.staging.yml up --build
+sudo docker compose -f docker-compose.staging.yml up --build
