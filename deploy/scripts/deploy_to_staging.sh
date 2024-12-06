@@ -25,7 +25,7 @@ ssh -o StrictHostKeyChecking=no -p $CI_DEPLOY_SSH_PORT $CI_DEPLOY_HOST << 'EOF'
 
   echo "--------Login to the container registry.-------"
 
-  echo "$CI_REGISTRY_PASSWORD" | sudo docker login -u $CI_REGISTRY_USER --password-stdin
+  echo "dckr_pat_hTuDk1FaqpFQ1ehrwnpRD7EZ8sE" | sudo docker login -u travis99 --password-stdin https://index.docker.io/v1
 
   docker rmi travis99/admin-server
   
